@@ -25,11 +25,11 @@ app.get('/api/passwords', (req, res) => {
   )
 
   let data = new Data();
-  data.id = "hi";
+  data.id = 5;
   data.name = "test";
   data.email = "email";
   data.save();
-  
+
   // Return them as json
   res.json(passwords);
 
