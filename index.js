@@ -15,14 +15,6 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-fetch('http://example.com/movies.json')
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  });
-
 app.post('/api/putData', (req, res) => {
   let data = new Data();
   const { id, name, email } = req.body;
