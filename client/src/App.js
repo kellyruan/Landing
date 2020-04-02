@@ -24,7 +24,7 @@ class App extends Component {
 
   putDataToDB = () => {
     axios.post('/api/putData', {
-      id: 0,
+      id: 5,
       name: "this.state.name",
       email: "this.state.email"
     });
