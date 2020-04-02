@@ -23,15 +23,13 @@ app.get('/api/passwords', (req, res) => {
   const passwords = Array.from(Array(count).keys()).map(i =>
     generatePassword(12, false)
   )
-  
+
   let data = new Data();
   data.id = "hi";
   data.name = "test";
   data.email = "email";
-  data.save((err) => {
-    if (err) return res.json({ success: false, error: err });
-    return res.json({ success: true });
-  });
+  data.save();
+  
   // Return them as json
   res.json(passwords);
 
