@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './App.css';
 
 class App extends Component {
   // Initialize state
-  state = { passwords: [] }
+  state = { 
+    passwords: [],
+    name: null,
+    email: null
+  }
 
   // Fetch passwords after first mount
   componentDidMount() {
@@ -16,6 +21,20 @@ class App extends Component {
       .then(res => res.json())
       .then(passwords => this.setState({ passwords }));
   }
+
+  putDataToDB = () => {
+    let currentIds = this.state.data.map((data) => data.id);
+    let idToBeAdded = 0;
+    while (currentIds.includes(idToBeAdded)) {
+      ++idToBeAdded;
+    }
+
+    axios.post('/api/putData', {
+      id: idToBeAdded,
+      name: "this.state.name",
+      email: "this.state.email"
+    });
+  };
 
   render() {
     const { passwords } = this.state;
@@ -43,6 +62,9 @@ class App extends Component {
               className="more"
               onClick={this.getPasswords}>
               Get More
+            </button>
+            <button onClick={() => this.putDataToDB()} style={{ width: '200px', height: '50px', borderRadius: '8px', fontSize: '20px', textAlign: 'center' }}>
+              Login
             </button>
           </div>
         ) : (
