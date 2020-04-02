@@ -1,11 +1,31 @@
 const express = require('express');
 const path = require('path');
+const mongoose = require('mongoose');
+var cors = require('cors');
+const bodyParser = require('body-parser');
+const logger = require('morgan');
+const Data = require('./data');
 const generatePassword = require('password-generator');
 
 const app = express();
+const dbRoute =
+  'mongodb+srv://Client:Kr4595329@cluster0-wvlxw.mongodb.net/test?retryWrites=true&w=majority';
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
+
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(logger('dev'));
+
+mongoose.connect(dbRoute, { useNewUrlParser: true });
+
+let db = mongoose.connection;
+
+db.once('open', () => console.log('connected to the database'));
+
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // Put all API endpoints under '/api'
 app.get('/api/passwords', (req, res) => {
