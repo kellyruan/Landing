@@ -15,6 +15,15 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
+app.post('/api/putData', (req, res) => {
+  let data = new Data();
+  const { id, name, email } = req.body;
+  data.id = id;
+  data.name = name;
+  data.email = email;
+  data.save();
+});
+
 // Put all API endpoints under '/api'
 app.get('/api/passwords', (req, res) => {
   const count = 5;
@@ -23,12 +32,6 @@ app.get('/api/passwords', (req, res) => {
   const passwords = Array.from(Array(count).keys()).map(i =>
     generatePassword(12, false)
   )
-
-  let data = new Data();
-  data.id = 5;
-  data.name = "test";
-  data.email = "email";
-  data.save();
 
   // Return them as json
   res.json(passwords);
