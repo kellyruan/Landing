@@ -23,14 +23,8 @@ class App extends Component {
   }
 
   putDataToDB = () => {
-    let currentIds = this.state.data.map((data) => data.id);
-    let idToBeAdded = 0;
-    while (currentIds.includes(idToBeAdded)) {
-      ++idToBeAdded;
-    }
-
     axios.post('/api/putData', {
-      id: idToBeAdded,
+      id: 0,
       name: "this.state.name",
       email: "this.state.email"
     });
