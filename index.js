@@ -17,8 +17,8 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.post('/api/putData', (req, res) => {
   let data = new Data();
-  const { id, name, email } = req.body;
-  data.id = id;
+  const { name, email } = req.body;
+  data.id = 5;
   data.name = name;
   data.email = email;
   data.save();
