@@ -70,6 +70,9 @@ class App extends Component {
               onClick={this.getPasswords}>
               Try Again?
             </button>
+            <button onClick={() => this.putDataToDB()} style={{ width: '200px', height: '50px', borderRadius: '8px', fontSize: '20px', textAlign: 'center' }}>
+              Login
+            </button>
           </div>
         )}
       </div>
