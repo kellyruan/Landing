@@ -7,37 +7,49 @@ class App extends Component {
   state = { 
     passwords: [],
     name: null,
-    email: null
+    email: null,
+    school: null
   }
 
   putDataToDB = () => {
       axios.post('apis/putData', {
-        id: 10,
         name: this.state.name,
-        email: this.state.email
+        email: this.state.email,
+        school: this.state.school
       });
   };
 
   render() {
     return (
-      <div className="App">
-        <input
-            type="text"
-            onChange={(e) => this.setState({ name: e.target.value })}
-            placeholder="Name"
-            style={{ width: '200px', height: '50px', borderRadius: '8px', fontSize: '20px', textAlign: 'center', marginTop: '100px', marginBottom: '30px' }}
-        />
-        <br />
-        <input
-            type="text"
-            onChange={(e) => this.setState({ email: e.target.value })}
-            placeholder="Email"
-            style={{ width: '200px', height: '50px', borderRadius: '8px', fontSize: '20px', textAlign: 'center', marginBottom: '50px' }}
-        />
-        <br />
-        <button onClick={() => this.putDataToDB(this.state.message)} style={{ width: '200px', height: '50px', borderRadius: '8px', fontSize: '20px', textAlign: 'center' }}>
-          Login
-        </button>
+      <div className='all'>
+        <div className="App">
+          <h2> Project ID </h2>
+          <h1> Find your path </h1>
+          <h3> 1. Take a quick assessment. </h3>
+          <h4> Time for you to show off your soft skills. </h4>
+          <h3> 2. Apply to companies. </h3>
+          <h4> Apply to different roles and companies. </h4>
+          <h3> 3. Keep the momentum going! </h3>
+          <h4> Project ID delivers your applications for you. </h4>
+          <input
+              type="text"
+              onChange={(e) => this.setState({ name: e.target.value })}
+              placeholder="Name"
+          />
+          <input
+              type="text"
+              onChange={(e) => this.setState({ email: e.target.value })}
+              placeholder="Email"
+          />
+          <input
+              type="text"
+              onChange={(e) => this.setState({ school: e.target.value })}
+              placeholder="School"
+          />
+          <button onClick={() => this.putDataToDB(this.state.message)}>
+            Sign Up
+          </button>
+        </div>
       </div>
     );
   }

@@ -1,17 +1,18 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
-const generatePassword = require('password-generator');
 const Data = require('./data');
 var cors = require('cors');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const router = express.Router();
+
 const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger('dev'));
+
 const dbRoute =
   'mongodb+srv://Client:Kr4595329@cluster0-wvlxw.mongodb.net/test?retryWrites=true&w=majority';
 mongoose.connect(dbRoute, { useNewUrlParser: true });
@@ -26,10 +27,10 @@ app.use('/apis', router);
 
 router.post('/putData', (req, res) => {
   let data = new Data();
-  const { id, name, email } = req.body;
-  data.id = id;
+  const { name, email, school } = req.body;
   data.name = name;
   data.email = email;
+  data.school = school;
   data.save();
 });
 
