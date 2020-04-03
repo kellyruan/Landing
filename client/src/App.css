@@ -1,9 +1,7 @@
 body {
   background-image: url(./background5.jpg);
   background-size: 100% 180%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+  background-position: top;}
 
 .App {
   text-align: left;
@@ -96,10 +94,35 @@ button {
 	margin-left: 4%;
 	color: black;
   	letter-spacing: 1px;
-  	width: 400px;
+  	width: 250px;
   	font-size: 20px;
 }
 
 .modal button {
 	width: 80%; 
 }
+
+@media screen and (max-width: 500px) {
+	body {
+		background-size: 100% 60%;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: 100%;
+	}
+
+	.grid2 {
+		width: 90%;
+		margin-bottom: 10%;
+	}
+
+	h3 {
+		width: 100%;
+	}
+
+	h4 {
+		width: 90%;
+	}
+}
+
