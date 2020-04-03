@@ -76,7 +76,6 @@ button {
 
 .grid2 {
 	background-color: white;
-	opacity: 90%;
 }
 
 .grid2 h3 {
@@ -90,7 +89,6 @@ button {
 	color: black;
   	letter-spacing: 1px;
   	width: 80%;
-  	opacity: 70%;
   	line-height: 24px;
 }
 
@@ -98,7 +96,6 @@ button {
 	margin-left: 4%;
 	color: black;
   	letter-spacing: 1px;
-  	opacity: 80%;
   	width: 400px;
   	font-size: 20px;
 }

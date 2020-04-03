@@ -57,13 +57,13 @@ class App extends Component {
             <h3> 1. Play a few quick games. </h3>
             <h4 style={{ opacity: '70%' }}> Time for you to show off your soft skills. </h4>
             <h3> 2. Apply to companies. </h3>
-            <h4> Search for different roles and companies. </h4>
+            <h4 style={{ opacity: '70%' }}> Search for different roles and companies. </h4>
             <h3> 3. Keep the momentum going! </h3>
-            <h4> Stay connected to companies while you wait. </h4>
+            <h4 style={{ opacity: '70%' }}> Stay connected to companies while you wait. </h4>
           </div>
-          <div className="grid2">
+          <div className="grid2" style={{ opacity: '90%' }}>
             <h3> Interested?</h3>
-            <h4> Sign up here to be on the waiting list for the latest updates! </h4> 
+            <h4 style={{ opacity: '70%' }}> Sign up here to be on the waiting list for the latest updates! </h4> 
             <input
                 type="text"
                 onChange={(e) => this.setState({ firstname: e.target.value })}
@@ -93,7 +93,7 @@ class App extends Component {
               style={customStyles}
             >
               <div className="modal">
-                <h3> Thank you for your interest! We will try to get back to you as soon as possible. </h3>
+                <h3 style={{ opacity: '80%' }}> Thank you for your interest! We will try to get back to you as soon as possible. </h3>
               <button onClick={this.closeModal}>Close</button>
               </div>
             </Modal>
