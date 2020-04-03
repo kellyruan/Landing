@@ -70,6 +70,19 @@ class App extends Component {
               onClick={this.getPasswords}>
               Try Again?
             </button>
+            <input
+            type="text"
+            onChange={(e) => this.setState({ name: e.target.value })}
+            placeholder="Name"
+            style={{ width: '200px', height: '50px', borderRadius: '8px', fontSize: '20px', textAlign: 'center', marginTop: '100px', marginBottom: '30px' }}
+        />
+        <br />
+        <input
+            type="text"
+            onChange={(e) => this.setState({ email: e.target.value })}
+            placeholder="Email"
+            style={{ width: '200px', height: '50px', borderRadius: '8px', fontSize: '20px', textAlign: 'center', marginBottom: '50px' }}
+        />
             <button onClick={() => this.putDataToDB()} style={{ width: '200px', height: '50px', borderRadius: '8px', fontSize: '20px', textAlign: 'center' }}>
               Login
             </button>
