@@ -31,10 +31,10 @@ class App extends Component {
   putDataToDB = () => {
       this.setState({ 
         showModal: true,
-        firstname: null,
-        lastname: null,
-        email: null,
-        school: null,
+        firstname: '',
+        lastname: '',
+        email: '',
+        school: '',
       });
       axios.post('apis/putData', {
         firstname: this.state.firstname,
@@ -69,21 +69,25 @@ class App extends Component {
                 type="text"
                 onChange={(e) => this.setState({ firstname: e.target.value })}
                 placeholder="First Name"
+                value={this.state.firstname}
             />
             <input
                 type="text"
                 onChange={(e) => this.setState({ lastname: e.target.value })}
                 placeholder="Last Name"
+                value={this.state.lastname}
             />
             <input
                 type="text"
                 onChange={(e) => this.setState({ email: e.target.value })}
                 placeholder="Email"
+                value={this.state.email}
             />
             <input
                 type="text"
                 onChange={(e) => this.setState({ school: e.target.value })}
                 placeholder="School"
+                value={this.state.school}
             />
             <button onClick={() => this.putDataToDB(this.state.message)}>
               Sign Up
