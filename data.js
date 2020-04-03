@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 
 const DataSchema = new Schema(
   {
-    name: String,
+    firstname: String,
+    lastname: String,
     email: String,
     school: String
   },

@@ -20,24 +20,20 @@ let db = mongoose.connection;
 db.once('open', () => console.log('connected to the database'));
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-// Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use('/apis', router); 
 
 router.post('/putData', (req, res) => {
   let data = new Data();
-  const { name, email, school } = req.body;
-  data.name = name;
+  const { firstname, lastname, email, school } = req.body;
+  data.firstname = firstname;
+  data.lastname = lastname;
   data.email = email;
   data.school = school;
   data.save();
 });
 
-// Put all API endpoints under '/api'
-
-// The "catchall" handler: for any request that doesn't
-// match one above, send back React's index.html file.
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });

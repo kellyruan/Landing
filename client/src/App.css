@@ -1,26 +1,32 @@
 body {
-  background-image: url(./background2.jpg);
-  background-size: cover;
+  background-image: url(./background5.jpg);
+  background-size: 100% 180%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .App {
   text-align: left;
-  margin-left: 6%;
+  margin-left: 10%;
   font-family: "Roboto";
   width: 90%;
 }
 
 h2 {
   margin-top: 3%;
+  margin-right: 4%;
+  margin-bottom: 5%;
   color: white;
   letter-spacing: 2px;
+  text-align: right;
+  font-size: 28px;
 }
 
 h1 {
   font-weight: normal;
-  font-size: 42px;
+  font-size: 62px;
   margin-top: 10%;
-  margin-bottom: 7%;
+  margin-bottom: 10%;
   color: white;
   letter-spacing: 2px;
 }
@@ -34,7 +40,7 @@ h3 {
 }
 
 h4 {
-  margin-top: 1%;
+  margin-top: -2%;
   margin-left: 1.5%;
   font-size: 18px;
   width: 500px;
@@ -45,16 +51,32 @@ h4 {
 }
 
 input, button {
-	width: 250px; 
+	width: 400px; 
 	height: 50px; 
 	border-radius: 8px;
 	font-size: 20px; 
-	margin-top: 5%;
-	margin-right: 2%;
+	margin-top: 10%;
+	margin-left: 4%;
 	padding-left: 12px;
 }
 
 button {
 	margin-left: 3%;
+	width: 420px; 
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 60% 30%;
+}
+
+.grid2 {
+	background-color: white
+}
+
+.grid2 h3 {
+	margin-left: 4%;
+	color: black;
+  	letter-spacing: 1px;
 }
 
