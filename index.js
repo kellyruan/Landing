@@ -3,8 +3,15 @@ const path = require('path');
 const mongoose = require('mongoose');
 const generatePassword = require('password-generator');
 const Data = require('./data');
-
+var cors = require('cors');
+const bodyParser = require('body-parser');
+const logger = require('morgan');
+const router = express.Router();
 const app = express();
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(logger('dev'));
 const dbRoute =
   'mongodb+srv://Client:Kr4595329@cluster0-wvlxw.mongodb.net/test?retryWrites=true&w=majority';
 mongoose.connect(dbRoute, { useNewUrlParser: true });
@@ -15,11 +22,12 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-app.post('/api/putData', (req, res) => {
+app.use('/apis', router);
+
+router.post('/putData', (req, res) => {
   let data = new Data();
-  console.log(req);
-  const { name, email } = req.body;
-  data.id = 5;
+  const { id, name, email } = req.body;
+  data.id = id;
   data.name = name;
   data.email = email;
   data.save();
