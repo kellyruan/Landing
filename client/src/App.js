@@ -15,8 +15,15 @@ class App extends Component {
     this.getPasswords();
   }
 
+  getPasswords = () => {
+    // Get the passwords and store them in state
+    fetch('/api/passwords')
+      .then(res => res.json())
+      .then(passwords => this.setState({ passwords }));
+  }
+
   putDataToDB = () => {
-      axios.post('api/putData', {
+      axios.post('apis/putData', {
         id: 10,
         name: this.state.name,
         email: this.state.email

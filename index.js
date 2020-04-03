@@ -22,7 +22,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-app.use('/api', router);
+app.use('/apis', router);
 
 router.post('/putData', (req, res) => {
   let data = new Data();
