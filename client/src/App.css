@@ -24,9 +24,9 @@ h2 {
 
 h1 {
   font-weight: normal;
-  font-size: 62px;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  font-size: 72px;
+  margin-top: 5%;
+  margin-bottom: 15%;
   color: white;
   letter-spacing: 2px;
 }
@@ -51,20 +51,20 @@ h4 {
 }
 
 input, button {
-	width: 400px; 
+	width: 80%; 
 	height: 50px; 
 	border-radius: 8px;
 	font-size: 20px; 
 	margin-top: 5%;
-	margin-left: 4%;
+	margin-left: 8%;
 	padding-left: 12px;
 }
 
 button {
-	margin-left: 3%;
+	margin-left: 8%;
 	margin-top: 10%;
 	margin-bottom: 8%;
-	width: 420px; 
+	width: 85%; 
 	background-color: orange;
 	color: white;
 }
@@ -76,20 +76,21 @@ button {
 }
 
 .grid2 {
-	background-color: white
+	background-color: white;
+	opacity: 90%;
 }
 
 .grid2 h3 {
-	margin-left: 4%;
+	margin-left: 8%;
 	color: black;
   	letter-spacing: 1px;
 }
 
 .grid2 h4 {
-	margin-left: 4%;
+	margin-left: 8%;
 	color: black;
   	letter-spacing: 1px;
-  	width: 90%;
+  	width: 80%;
   	opacity: 70%;
   	line-height: 24px;
 }
@@ -104,5 +105,5 @@ button {
 }
 
 .modal button {
-	width: 380px; 
+	width: 80%; 
 }
