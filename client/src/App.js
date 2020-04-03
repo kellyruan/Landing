@@ -56,13 +56,13 @@ class App extends Component {
           <div className="grid1">
             <h1> Find Your Path </h1>
             <h3> 1. Play a few quick games. </h3>
-            <h4 style={{ opacity: '70%' }}> Time for you to show off your soft skills. </h4>
+            <h4 style={{ opacity: '80%' }}> Time for you to show off your soft skills. </h4>
             <h3> 2. Apply to companies. </h3>
-            <h4 style={{ opacity: '70%' }}> Search for different roles and companies. </h4>
+            <h4 style={{ opacity: '80%' }}> Search for different roles and companies. </h4>
             <h3> 3. Keep the momentum going! </h3>
-            <h4 style={{ opacity: '70%' }}> Stay connected to companies while you wait. </h4>
+            <h4 style={{ opacity: '80%' }}> Stay connected to companies while you wait. </h4>
           </div>
-          <div className="grid2" style={{ opacity: '90%' }}>
+          <div className="grid2" style={{ opacity: '80%' }}>
             <h3> Interested?</h3>
             <h4 style={{ opacity: '70%' }}> Sign up here to be on the waiting list for the latest updates! If you have any questions or feedback, please contact us at kellyruan303@gmail.com.</h4> 
             <input
