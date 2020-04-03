@@ -55,15 +55,20 @@ input, button {
 	height: 50px; 
 	border-radius: 8px;
 	font-size: 20px; 
-	margin-top: 10%;
+	margin-top: 5%;
 	margin-left: 4%;
 	padding-left: 12px;
 }
 
 button {
 	margin-left: 3%;
+	margin-top: 10%;
+	margin-bottom: 8%;
 	width: 420px; 
+	background-color: orange;
+	color: white;
 }
+
 
 .grid {
 	display: grid;
@@ -80,3 +85,24 @@ button {
   	letter-spacing: 1px;
 }
 
+.grid2 h4 {
+	margin-left: 4%;
+	color: black;
+  	letter-spacing: 1px;
+  	width: 90%;
+  	opacity: 70%;
+  	line-height: 24px;
+}
+
+.modal h3 {
+	margin-left: 4%;
+	color: black;
+  	letter-spacing: 1px;
+  	opacity: 80%;
+  	width: 400px;
+  	font-size: 20px;
+}
+
+.modal button {
+	width: 380px; 
+}

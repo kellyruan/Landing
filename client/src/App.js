@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Modal from 'react-modal';
 import './App.css';
+
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '48%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)',
+  }
+};
 
 class App extends Component {
   state = { 
@@ -8,10 +21,20 @@ class App extends Component {
     firstname: null,
     lastname: null,
     email: null,
-    school: null
+    school: null,
+    showModal: false
   }
 
+  closeModal = this.closeModal.bind(this);
+
   putDataToDB = () => {
+      this.setState({ 
+        showModal: true,
+        firstname: null,
+        lastname: null,
+        email: null,
+        school: null,
+      });
       axios.post('apis/putData', {
         firstname: this.state.firstname,
         lastname: this.state.lastname,
@@ -19,6 +42,10 @@ class App extends Component {
         school: this.state.school
       });
   };
+  
+  closeModal () {
+    this.setState({ showModal: false });
+  }
 
   render() {
     return (
@@ -35,7 +62,8 @@ class App extends Component {
             <h4> Stay connected to companies while you wait. </h4>
           </div>
           <div className="grid2">
-            <h3 className="formtext"> Interested? Sign Up Now </h3>
+            <h3> Interested?</h3>
+            <h4> Sign up here to be on the waiting list for the latest updates! </h4> 
             <input
                 type="text"
                 onChange={(e) => this.setState({ firstname: e.target.value })}
@@ -59,6 +87,16 @@ class App extends Component {
             <button onClick={() => this.putDataToDB(this.state.message)}>
               Sign Up
             </button>
+            <Modal 
+              isOpen={this.state.showModal}
+              contentLabel="Minimal Modal Example"
+              style={customStyles}
+            >
+              <div className="modal">
+                <h3> Thank you for your interest! We will try to get back to you as soon as possible. </h3>
+              <button onClick={this.closeModal}>Close</button>
+              </div>
+            </Modal>
           </div>
         </div>
       </div>
