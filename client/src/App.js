@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Modal from 'react-modal';
 import './App.css';
+import ReactGA from 'react-ga';
 
+const trackingId = "UA-162746347-1";
+ReactGA.initialize(trackingId);
+ReactGA.pageview("/");
 
 const customStyles = {
   content : {
@@ -51,7 +55,9 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <h2> Project ID </h2>
+        <div className="title">
+          <h2> Project ID </h2>
+        </div>
         <div className="grid">
           <div className="grid1">
             <h1> Find Your Path </h1>
@@ -62,7 +68,7 @@ class App extends Component {
             <h3> 3. Keep the momentum going! </h3>
             <h4 style={{ opacity: '80%' }}> Stay connected to companies while you wait. </h4>
           </div>
-          <div className="grid2" style={{ opacity: '80%' }}>
+          <div className="grid2" style={{ opacity: '70%' }}>
             <h3> Interested?</h3>
             <h4 style={{ opacity: '70%' }}> Sign up here to be on the waiting list for the latest updates! If you have any questions or feedback, please contact us at kellyruan303@gmail.com.</h4> 
             <input

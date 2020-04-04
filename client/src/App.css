@@ -98,6 +98,10 @@ button {
   	font-size: 20px;
 }
 
+.title {
+	background-color: orange;
+}
+
 .modal button {
 	width: 80%; 
 }
