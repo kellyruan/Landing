@@ -3,10 +3,16 @@ import axios from 'axios';
 import Modal from 'react-modal';
 import './App.css';
 import ReactGA from 'react-ga';
+import { createBrowserHistory } from 'history';
 
+const history = createBrowserHistory();
 const trackingId = "UA-162746347-1";
 ReactGA.initialize(trackingId);
-ReactGA.pageview("/");
+
+history.listen(location => {
+  ReactGA.set({ page: location.pathname }); // Update the user's current page
+  ReactGA.pageview(location.pathname); // Record a pageview for the given page
+});
 
 const customStyles = {
   content : {
