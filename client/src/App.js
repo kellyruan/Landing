@@ -3,16 +3,9 @@ import axios from 'axios';
 import Modal from 'react-modal';
 import './App.css';
 import ReactGA from 'react-ga';
-import { createBrowserHistory } from 'history';
 
-const history = createBrowserHistory();
 const trackingId = "UA-162746347-1";
 ReactGA.initialize(trackingId);
-
-history.listen(location => {
-  ReactGA.set({ page: location.pathname }); // Update the user's current page
-  ReactGA.pageview(location.pathname); // Record a pageview for the given page
-});
 
 const customStyles = {
   content : {
@@ -74,7 +67,7 @@ class App extends Component {
             <h3> 3. Keep the momentum going! </h3>
             <h4 style={{ opacity: '80%' }}> Stay connected to companies while you wait. </h4>
           </div>
-          <div className="grid2" style={{ opacity: '70%' }}>
+          <div className="grid2" style={{ opacity: '80%' }}>
             <h3> Interested?</h3>
             <h4 style={{ opacity: '70%' }}> Sign up here to be on the waiting list for the latest updates! If you have any questions or feedback, please contact us at kellyruan303@gmail.com.</h4> 
             <input
