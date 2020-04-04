@@ -6,7 +6,7 @@ import ReactGA from 'react-ga';
 
 const trackingId = "UA-162746347-1";
 ReactGA.initialize(trackingId);
-ReactGA.pageview("/");
+ReactGA.pageview("https://projectid.herokuapp.com/");
 
 const customStyles = {
   content : {
