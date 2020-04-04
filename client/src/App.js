@@ -3,10 +3,19 @@ import axios from 'axios';
 import Modal from 'react-modal';
 import './App.css';
 import ReactGA from 'react-ga';
+import { createBrowserHistory } from 'history';
 
 const trackingId = "UA-162746347-1";
 ReactGA.initialize(trackingId);
-ReactGA.pageview(window.location.pathname + window.location.search);
+
+
+const history = createBrowserHistory();
+history.listen((location, action) => {
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+});
+
+
 
 const customStyles = {
   content : {
@@ -29,6 +38,11 @@ class App extends Component {
     school: null,
     showModal: false
   }
+
+  componentWillMount() {
+        ReactGA.set({ page: window.location.pathname });
+        ReactGA.pageview(window.location.pathname);
+    }
 
   closeModal = this.closeModal.bind(this);
 
