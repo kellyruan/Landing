@@ -110,7 +110,7 @@ button {
 
 @media screen and (max-width: 500px) {
 	body {
-		background-size: 200% 95%;
+		background-size: 200% 100%;
   		background-image: url(./background2.jpg);
   		background-position: center;
 	}
