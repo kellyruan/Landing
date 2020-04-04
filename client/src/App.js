@@ -40,8 +40,8 @@ class App extends Component {
   }
 
   componentWillMount() {
-        ReactGA.set({ page: window.location.pathname });
-        ReactGA.pageview(window.location.pathname);
+        ReactGA.set({ page: "/" });
+        ReactGA.pageview("/");
     }
 
   closeModal = this.closeModal.bind(this);
