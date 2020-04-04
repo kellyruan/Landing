@@ -6,7 +6,7 @@ body {
 
 .App {
   text-align: left;
-  font-family: "Roboto";
+  font-family: 'Roboto';
 }
 
 h2 {
@@ -126,7 +126,7 @@ button {
 	}
 
 	h1 {
-  		font-size: 42px;
+  		font-size: 40px;
   		margin-bottom: 70px;
 	}
 

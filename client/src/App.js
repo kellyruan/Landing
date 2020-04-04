@@ -59,7 +59,7 @@ class App extends Component {
         </div>
         <div className="grid">
           <div className="grid1">
-            <h1> Find Your Path </h1>
+            <h1> Start Your Journey </h1>
             <h3> 1. Play a few quick games. </h3>
             <h4 style={{ opacity: '80%' }}> Time for you to show off your soft skills. </h4>
             <h3> 2. Apply to companies. </h3>
