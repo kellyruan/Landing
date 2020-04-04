@@ -67,7 +67,7 @@ class App extends Component {
             <h3> 3. Keep the momentum going! </h3>
             <h4 style={{ opacity: '80%' }}> Stay connected to companies while you wait. </h4>
           </div>
-          <div className="grid2" style={{ opacity: '80%' }}>
+          <div className="grid2" style={{ opacity: '90%' }}>
             <h3> Interested?</h3>
             <h4 style={{ opacity: '70%' }}> Sign up here to be on the waiting list for the latest updates! If you have any questions or feedback, please contact us at []@gmail.com.</h4> 
             <input

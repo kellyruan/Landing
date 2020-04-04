@@ -1,5 +1,5 @@
 body {
-  background-image: url(./background5.jpg);
+  background-image: url(./background3.jpg);
   background-size: 100% 120%;
   background-position: top;
 }
@@ -15,7 +15,7 @@ h2 {
   padding-right: 4%;
   margin-top: 0px;
   margin-bottom: 5%;
-  color: white;
+  color: black;
   letter-spacing: 2px;
   text-align: right;
   font-size: 28px;
@@ -25,7 +25,7 @@ h1 {
   font-weight: normal;
   font-size: 72px;
   margin-top: 5%;
-  margin-bottom: 20%;
+  margin-bottom: 180px;
   color: white;
   letter-spacing: 2px;
 }
@@ -63,8 +63,8 @@ button {
 	margin-top: 10%;
 	margin-bottom: 8%;
 	width: 85%; 
-	background-color: orange;
-	color: white;
+	background-color: lightblue;
+	color: black;
 }
 
 
@@ -101,7 +101,7 @@ button {
 }
 
 .title {
-	background-color: orange;
+	background-color: lightblue;
 }
 
 .modal button {
@@ -110,7 +110,9 @@ button {
 
 @media screen and (max-width: 500px) {
 	body {
-		background-size: 100% 60%;
+		background-size: 200% 95%;
+  		background-image: url(./background2.jpg);
+  		background-position: center;
 	}
 
 	.grid {
@@ -123,14 +125,20 @@ button {
 		margin-bottom: 10%;
 	}
 
+	h1 {
+  		font-size: 42px;
+  		margin-bottom: 70px;
+	}
+
 	h3 {
 		width: 100%;
-		font-size: 28px;
+		font-size: 24px;
 	}
 
 	h4 {
 		width: 90%;
-		font-size: 18px;
+		font-size: 15px;
+  		margin-top: -5%;
 	}
 }
 
