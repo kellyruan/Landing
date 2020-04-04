@@ -69,7 +69,7 @@ class App extends Component {
           </div>
           <div className="grid2" style={{ opacity: '80%' }}>
             <h3> Interested?</h3>
-            <h4 style={{ opacity: '70%' }}> Sign up here to be on the waiting list for the latest updates! If you have any questions or feedback, please contact us at kellyruan303@gmail.com.</h4> 
+            <h4 style={{ opacity: '70%' }}> Sign up here to be on the waiting list for the latest updates! If you have any questions or feedback, please contact us at []@gmail.com.</h4> 
             <input
                 type="text"
                 onChange={(e) => this.setState({ firstname: e.target.value })}

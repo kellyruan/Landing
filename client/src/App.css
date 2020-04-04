@@ -125,10 +125,12 @@ button {
 
 	h3 {
 		width: 100%;
+		font-size: 28px;
 	}
 
 	h4 {
 		width: 90%;
+		font-size: 18px;
 	}
 }
 
